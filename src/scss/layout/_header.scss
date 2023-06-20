@@ -45,8 +45,12 @@
 //검색 폼
 .searchForm {
   &__group {
-    @include flexbox($justify: flex-end);
-    text-align: right;
     background: blue;
+    @include flexbox($justify: flex-end);
+
+    .formInput__input {
+      width: rem(460px);
+
+    }
   }
 }
