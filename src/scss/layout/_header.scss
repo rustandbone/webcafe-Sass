@@ -2,18 +2,19 @@
 @use './../components' as *;
 
 .appHeader {
-  background: yellow;
   padding: rem(16px) rem(24px);
+  @include flexbox(column);
+  gap: rem(16px);
 
   @include mobile {
     background: $dark-brown;
     color: $white;
-
-    @include flexbox(column);
   }
 
   @include desktop {
     position: relative;
+    max-width: 1024px;
+    @include containerMax;
   }
 }
 
@@ -30,7 +31,7 @@
   }
   
   @include desktop {
-    @include posCenter;
+    @include posCenterY;
   }
 }
 
@@ -46,8 +47,8 @@
 //검색 폼
 .searchForm {
   &__group {
-    background: blue;
     @include flexbox($justify: flex-end);
+    gap: rem(8px);
 
     @include mobile {
       .formInput {
