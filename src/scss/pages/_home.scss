@@ -70,3 +70,26 @@
     font-size: rem(24px);
   }
 }
+
+.board {
+  position: relative;
+
+  &__item {
+    @include flexbox();
+    column-gap: rem(8px);
+    @include marginY(8px);
+  }
+
+  &__more {
+    @include posRightTop();
+  }
+
+  &__link {
+    flex-grow: 1;
+    @include textOver;
+  }
+
+  &__date {
+    white-space: nowrap;
+  }
+}
