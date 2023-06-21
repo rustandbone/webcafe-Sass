@@ -3,13 +3,18 @@
 //메인 내비게이션
 .menu {
   @include mobile {
+    @at-root .is--active &__list {
+      transform: none;
+    }
+    
     &__list {
-      background: $accent-opacity-color;
       width: 70vw;
       height: 100vh;
       position: fixed;
       left: 0;
       top: 0;
+      transform: translateX(-150%);
+      background: $accent-opacity-color;
       @include padding(20px);
     }
 
