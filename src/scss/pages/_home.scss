@@ -93,3 +93,15 @@
     white-space: nowrap;
   }
 }
+
+.twitter {
+  &__userProfile {
+    @include ratio(1, 1);
+  }
+  
+  &__userProfileImage {
+    @include respons(width, 100%);
+    border-radius: 50%;
+    @include fit(cover, 50%, 50%)
+  }
+}
