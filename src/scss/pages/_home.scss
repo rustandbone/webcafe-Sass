@@ -46,3 +46,27 @@
     @include ratio(16, 9);
   }
 }
+
+.book {
+  &__cover {
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+  }
+
+  &__coverImage {
+    @include paddingY(10px);
+  }
+
+  &__info {
+    @include flexbox($justify: center, $wrap: wrap);
+    column-gap: rem(8px);
+    margin-bottom: 10px;
+  }
+
+  @at-root .ratingStar {
+    width: 100%;
+    text-align: center;
+    font-size: rem(24px);
+  }
+}
