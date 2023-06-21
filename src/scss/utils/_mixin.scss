@@ -93,5 +93,9 @@
   grid-template-rows: auto;
   column-gap: rem($column-gap);
   row-gap: rem($row-gap);
+}
 
+//ratio 믹스인
+@mixin ratio($w, $h) {
+  aspect-ratio : $w / $h;
 }
