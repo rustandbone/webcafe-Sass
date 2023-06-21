@@ -81,3 +81,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@mixin gridbox(
+  $column-count:12,  
+  $column-width : 1fr, 
+  $row-gap: 0, 
+  $column-gap: 16px
+  ) {
+  display: grid;
+  grid-template-columns: repeat($column-count, $column-width);
+  grid-template-rows: auto;
+  column-gap: rem($column-gap);
+  row-gap: rem($row-gap);
+
+}
