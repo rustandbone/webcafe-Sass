@@ -367,6 +367,58 @@ legend {
   margin: -1px;
 }
 
+.accentBook {
+  color: #abd375;
+}
+
+.accentNews {
+  color: #e8ca58;
+}
+
+.accentBoard {
+  color: #988574;
+}
+
+.accentFavorite {
+  color: #eea60a;
+}
+
+.accentTwitter {
+  color: #6aaee6;
+}
+
+.sprite {
+  min-height: 3.75rem;
+  background-image: url(./../assets/images/sprite_main.png);
+  background-repeat: no-repeat;
+  padding-left: 4rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.sprite [class*=enTitle] {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
 .formInput__input {
   appearance: none;
   display: block;
@@ -397,9 +449,9 @@ legend {
 
 @media (max-width: 767px) {
   .button--burger {
+    background: transparent;
     width: 2.25rem;
     height: 2.25rem;
-    background: blue;
     border: 0;
     padding: 0;
     position: absolute;
@@ -504,6 +556,171 @@ legend {
   .searchForm__group .formInput {
     width: 25rem;
   }
+}
+
+@media (max-width: 767px) {
+  .is--active .menu__list {
+    transform: none;
+  }
+  .menu__list {
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-150%);
+    background: rgba(240, 230, 140, 0.85);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .menu__item {
+    border-bottom: 1px solid #101010;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    background: #988574;
+  }
+  .menu__list {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+.menu__link {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.appMain {
+  display: grid;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .appMain {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .appMain {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1.25rem;
+    row-gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book twitter twitter twitter twitter twitter favorite favorite favorite" "book book book book . board board board board board board board";
+  }
+  .appMain .news {
+    grid-area: news;
+  }
+  .appMain .book {
+    grid-area: book;
+  }
+  .appMain .twitter {
+    grid-area: twitter;
+  }
+  .appMain .board {
+    grid-area: board;
+  }
+  .appMain .favorite {
+    grid-area: favorite;
+  }
+}
+
+.iframeWrapper {
+  aspect-ratio: 1.7777777778;
+}
+
+.book__cover {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.book__coverImage {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.book__info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 0.5rem;
+  margin-bottom: 10px;
+}
+.ratingStar {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  column-gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.board__link {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board__date {
+  white-space: nowrap;
+}
+
+.twitter__userProfile {
+  aspect-ratio: 1;
+}
+.twitter__userProfileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 /*# sourceMappingURL=index.css.map */
