@@ -43,6 +43,6 @@
 
 .news {
   @at-root .iframeWrapper {
-    aspect-ratio : 16/9;
+    @include ratio(16, 9);
   }
 }
